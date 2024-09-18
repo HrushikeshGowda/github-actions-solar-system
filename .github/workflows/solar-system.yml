@@ -94,7 +94,7 @@ jobs:
         uses: azure/k8s-set-context@v3
         with:
           method: kubeconfig
-          kubeconfig: ${{ secrets.KUBECONFIG }}
+          kubeconfig: '${{ secrets.KUBECONFIG }}'
       - name: Verify Kubectl
         run: kubectl version --short -o yaml
       
